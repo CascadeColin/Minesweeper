@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    color:white;
+    background-color: #353535;
+    /* max-width: 100%;
+    margin: auto; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    margin: 10px auto 10px auto;
+    padding: 5px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.mines {
+    grid-area: left;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.resetBtn {
+    grid-area: center;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.timer {
+    grid-area: right;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.scoreboard {
+    display: grid;
+    grid-template-areas: 'left center right';
+    text-align: center;
+    padding: 10px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns:40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    grid-template-rows:40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    gap: 2px;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.mineBtn {
+    background-color: #dadada;
+    border: none;
+    border-radius: 2px;
+}
