@@ -98,6 +98,7 @@ const gameReset = () => {
 
 // FIXME: rewrite?
 // get value of arr (x), make a new arr with x # of indexes "[0,0,1,...,x]".  randomly splice 10 extries of that arr into new arr, use that arr to return and assign mines in init().
+// array[index] = bomb -> set the bomb attribute inside the original array?
 const mineCreator = (count, arr) => {
   minesToCreate = count;
   // creates a new array [0,1,...,n] where n = array.length
