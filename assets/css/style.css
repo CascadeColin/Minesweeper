@@ -60,3 +60,10 @@
     border: none;
     border-radius: 2px;
 }
+
+.safe {
+    background-color: #dadada;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+}
