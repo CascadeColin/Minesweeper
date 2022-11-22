@@ -111,7 +111,25 @@ const mineCreator = (count, arr) => {
     minesToCreate--;
   }
 }
-  
+
+// use 2D array - array where each item is an array
+// matrix = [
+//   [1,2,3],
+//   [4,5,6],
+//   [7,8,9],
+// ];
+// matrix[2][1] = 8;
+
+const init = () => {
+  timerEl.textContent = time;
+  mineCountEl.textContent = mineCounter;
+  mineCreator(10,mineBtnEl);
+  // randomly assigns mines in gameboard
+  // for each mineBtn (81 elements), randomly assign 10 of them as "bomb"
+};
+init();
+
+  // 
   // let currentIndex = array.length,  randomIndex;
   // let minesArr = [];
   // // array.length-10 is for beginner mode (10 mines in beginner minesweeper)
@@ -128,25 +146,16 @@ const mineCreator = (count, arr) => {
 
 // helps mineCreator() by eliminating duplicate tiles.  If there is a dupe, mineCreator() runs again.
 // TODO: does this work with new version of mineCreator()?
-const eliminateDuplicates = (arr) => {
-  let i;
-  out = [],
-  obj = {};
-  for (i = 0; i < arr.length; i++) {
-    obj[arr[i]] = 0;
-  }
-  for (i in obj) {
-    out.push(i);
-  }
-  arr = out;
-  return arr;
-}
-
-const init = () => {
-  timerEl.textContent = time;
-  mineCountEl.textContent = mineCounter;
-  mineCreator(10,mineBtnEl);
-  // randomly assigns mines in gameboard
-  // for each mineBtn (81 elements), randomly assign 10 of them as "bomb"
-};
-init();
+// const eliminateDuplicates = (arr) => {
+//   let i;
+//   out = [],
+//   obj = {};
+//   for (i = 0; i < arr.length; i++) {
+//     obj[arr[i]] = 0;
+//   }
+//   for (i in obj) {
+//     out.push(i);
+//   }
+//   arr = out;
+//   return arr;
+// }
